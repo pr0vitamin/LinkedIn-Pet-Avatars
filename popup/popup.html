@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LinkedIn Pet Avatars</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <p class="eyebrow">LinkedIn Pet Avatars</p>
+      <h1>Bring your own pet photos</h1>
+      <label class="toggle" for="enabled-toggle">
+        <span>Enabled</span>
+        <input id="enabled-toggle" type="checkbox" role="switch">
+      </label>
+      <section class="status-card">
+        <p class="status-label">Uploaded photos</p>
+        <p id="photo-count" class="status-value">0</p>
+        <p id="status-copy" class="hint">Using the built-in sample photo until you upload your own photos.</p>
+      </section>
+      <button id="manage-photos" class="action-button" type="button">Manage Photos</button>
+      <p class="hint">Refresh LinkedIn if a page was already open before you installed the extension.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

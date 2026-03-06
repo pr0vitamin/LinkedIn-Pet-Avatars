@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manage Pet Photos</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">LinkedIn Pet Avatars</p>
+        <h1>Build your pet photo library</h1>
+        <p class="lede">Upload a batch of photos once and the extension will rotate through them on LinkedIn. Until then, it uses a built-in sample photo. Photos are stored locally in the extension on this browser only.</p>
+      </section>
+
+      <section class="panel upload-panel">
+        <div>
+          <p class="panel-label">Photo library</p>
+          <h2 id="library-summary">0 photos uploaded</h2>
+          <p class="panel-copy">We automatically center-crop imported images and compress them for fast avatar replacement. The Open to Snacks ring and banner are applied on LinkedIn so they match LinkedIn’s own avatar crop.</p>
+        </div>
+        <div class="upload-actions">
+          <input id="photo-input" type="file" accept="image/*" multiple hidden>
+          <button id="upload-button" class="primary-button" type="button">Upload Photos</button>
+          <p class="microcopy">JPG, PNG, WebP, or any browser-decodable image. Up to 100 stored photos, each shown with the Open to Snacks treatment on LinkedIn.</p>
+        </div>
+      </section>
+
+      <section id="status-banner" class="status-banner" hidden></section>
+
+      <section class="panel gallery-panel">
+        <div class="panel-header">
+          <div>
+            <p class="panel-label">Preview</p>
+            <h2>Your pet rotation</h2>
+          </div>
+        </div>
+        <div id="empty-state" class="empty-state">
+          <p>No custom photos yet.</p>
+          <p>Until you upload some, the extension will keep using the built-in sample photo.</p>
+        </div>
+        <div id="gallery" class="gallery" hidden></div>
+      </section>
+    </main>
+
+    <template id="photo-card-template">
+      <article class="photo-card">
+        <div class="photo-preview-frame">
+          <img class="photo-preview" alt="Uploaded pet photo preview">
+        </div>
+        <div class="photo-meta">
+          <p class="photo-size"></p>
+          <button class="delete-button" type="button">Delete</button>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
